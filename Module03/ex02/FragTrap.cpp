@@ -34,13 +34,13 @@ FragTrap::FragTrap(const std::string &name) : ClapTrap(name)
 	this->_energyPoints = 100;
 	this->_attackDamage = 30;
 
-	std::cout << "FragTrap " << this->_name << " constructor calles" << std::endl;
+	std::cout << "FragTrap " << this->_name << " constructor called" << std::endl;
 }
 
 // Destructor
 FragTrap::~FragTrap()
 {
-	std::cout << "FragTrap " << this->_name << " destructor calles" << std::endl;
+	std::cout << "FragTrap " << this->_name << " destructor called" << std::endl;
 }
 
 // Special ability
