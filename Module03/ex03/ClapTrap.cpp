@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ClapTrap.cpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: adruz-to <adruz-to@student.42malaga.com    +#+  +:+       +#+        */
+/*   By: albarrei <albarrei@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/13 16:10:17 by adruz-to          #+#    #+#             */
-/*   Updated: 2026/02/18 17:08:42 by adruz-to         ###   ########.fr       */
+/*   Updated: 2026/06/06 17:15:58 by albarrei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -80,13 +80,13 @@ void ClapTrap::takeDamage(unsigned int amount)
 	{
 		_hitPoints = 0;
 		std::cout << "ClapTrap " << _name << " takes " << amount << " points of damage! Hit points left: "
-				<< std::endl;
+		<< _hitPoints << std::endl;
 	}
 	else
 	{
 		_hitPoints -= amount;
 		std::cout << "ClapTrap " << _name << " takes " << amount << " points of damage! Hit points left: "
-				<< std::endl;
+		<< _hitPoints << std::endl;
 	}
 }
 
@@ -107,4 +107,11 @@ void ClapTrap::beRepaired(unsigned int amount)
 	_hitPoints += amount;
 	std::cout << "ClapTrap " << _name << " is repaired for " << amount << " hit points! Total HP: " << _hitPoints
 			<< std::endl;
+}
+
+std::ostream&	operator<<( std::ostream& o, const ClapTrap& i)
+{
+	(void)i;
+	o << i._name;
+	return (o);
 }
