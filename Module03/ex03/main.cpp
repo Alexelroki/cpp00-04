@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: adruz-to <adruz-to@student.42malaga.com    +#+  +:+       +#+        */
+/*   By: albarrei <albarrei@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/13 16:09:52 by adruz-to          #+#    #+#             */
-/*   Updated: 2026/02/18 17:11:19 by adruz-to         ###   ########.fr       */
+/*   Updated: 2026/06/06 17:44:38 by albarrei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,6 +29,7 @@ int main(void)
 
 	std::cout << "\n=== Testing DiamondTrap copy ===" << std::endl;
 	DiamondTrap diamond2(diamond);
+	diamond2.takeDamage(50);
 	diamond2.whoAmI();
 
 	std::cout << "\n=== Testing basic ClapTrap ===" << std::endl;
@@ -45,6 +46,24 @@ int main(void)
 	frag.attack("target");
 	frag.highFivesGuys();
 	
+	std::cout << "\n================ Testing Default Names 3 ================" << std::endl;
+	ClapTrap	clapi;
+	FragTrap	frapi;
+	ScavTrap	scapi;
+
+	std::cout << "clapi name: " << clapi << std::endl;
+	std::cout << "frapi name: " << frapi << std::endl;
+	std::cout << "scapi name: " << scapi << std::endl;
+
+	std::cout << "\n================ Testing Default Names 1 ================" << std::endl;
+	DiamondTrap	diapi;
+	std::cout << "diapi name: " << diapi << std::endl;
+	diapi.whoAmI();
+
+	// std::cout << "diapi name: " << diapi << std::endl;
+	// std::cout << "diapi name: " << diapi << std::endl;
+	// std::cout << "diapi name: " << diapi << std::endl;
+
 	std::cout << "\n=== Destructors will be called now ===" << std::endl;
 	return 0;
 }
